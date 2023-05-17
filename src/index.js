@@ -1,4 +1,5 @@
 require('dotenv').config();
+const Discord = require('discord.js');
 const { Client, IntentsBitField } = require('discord.js');
 
 const client = new Client({
@@ -31,6 +32,8 @@ client.on('messageCreate', (message) => {
     if(message.content.toLocaleLowerCase().includes('nampat')){
         message.reply('NAMPAT! NAMPAT! NAMPAT!');
     }
+
 });
+
 
 client.login(process.env.TOKEN); //Token is normally stored here but it is stored in the env file.
